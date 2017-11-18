@@ -21,9 +21,9 @@
         <br>
 
 
-        <p><a href="dots"><img src="dots1.jpg"></a>
-        <p><a href="dots"><img src="dots2.jpg"></a>
-        <p><a href="dots"><img src="dots3.jpg"></a>
+        <p><a href="dots" class="dots"><img src="dots1.jpg"></a>
+        <p><a href="dots" class="dots"><img src="dots2.jpg"></a>
+        <p><a href="dots" class="dots"><img src="dots3.jpg"></a>
         <br>
 
         <p><a href="melt"><img src="melt.jpg" style="width: 300px"></a>
@@ -94,5 +94,11 @@
         setInterval(function() {
             $("#currentTime").text(moment().format('h:mm:ssa'));
         }, 1000);
+
+        $('.dots a').click(function(event){
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                event.preventDefault();
+            }
+        }); 
     </script>
 </html>
