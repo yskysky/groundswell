@@ -20,7 +20,7 @@ var Dot = function() {
     var n = document.createElement("div");
     n.className = "trail";
     n.style.backgroundColor = getRandomColor();
-    n.style.boxShadow = "5px 5px 5px grey";
+    n.style.boxShadow = "2px 2px 2px grey";
     document.body.appendChild(n);
     return n;
   }());
@@ -33,7 +33,7 @@ Dot.prototype.draw = function() {
 };
 
 // Creates the Dot objects, populates the dots array
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 300; i++) {
   var d = new Dot();
   dots.push(d);
 }
@@ -52,8 +52,8 @@ function draw() {
     dot.x = x;
     dot.y = y;
     dot.draw();
-    x += (nextDot.x - dot.x) * 0.95;
-    y += (nextDot.y - dot.y) * 0.95;
+    x += (nextDot.x - dot.x) * 0.9;
+    y += (nextDot.y - dot.y) * 0.9;
 
   });
 }
@@ -62,6 +62,7 @@ addEventListener("mousemove", function(event) {
   //event.preventDefault();
   mouse.x = event.pageX;
   mouse.y = event.pageY;
+  document.body.requestPointerLock();
 });
 
 // animate() calls draw() then recursively calls itself
