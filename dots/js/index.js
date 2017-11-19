@@ -20,7 +20,7 @@ var Dot = function() {
     var n = document.createElement("div");
     n.className = "trail";
     n.style.backgroundColor = getRandomColor();
-    n.style.boxShadow = "2px 2px 2px grey";
+    n.style.boxShadow = "2px 2px 2px #333333";
     document.body.appendChild(n);
     return n;
   }());
