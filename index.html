@@ -1,108 +1,41 @@
 <!doctype html>
 <html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-        <link rel="icon" href="weather64.png">
-        <script src="jq.js"></script>
-        <script src="moments.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Top 10 Reasons Why Sky</title>
-    </head>
-    <body>
-        <h1>Hello, it's <span id="currentTime" class="glow whitetext"></span> <span id="currentDate"></span></h1>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="weather64.png">
+    <script src="jq.js"></script>
 
-        <h2><i>my name is sky</i></h2>
-        Welcome to my website.
-        <br>
-        Send me mail at <a href="mailto:ysky125@gmail.com" class="glow">no@no.com</a>
+    <title>groundswell</title>
+</head>
 
-        <br>
-        <br>
-        <br>
+<body>
 
-        <p><img id="clairdelunePic" src="clairdelune.jpg" style="width: 800px">
-        <p>clair de lune
-        <br>
+    <div class="main">
+        <h1>groundswell </h1>
 
-        <audio id="clairdeluneSound" style="display: none;">
-          <source src="debussy64.mp3" type="audio/mpeg">
-        </audio>
+        <img id="groundswell" src="cover.jpg" style="width: 800px">
 
-        <p><a href="dots" class="dots"><img src="dots3.jpg"></a>
-        <p>dots
-        <br>
+        <div id="anotherLayer">
 
-        <p><a href="melt"><img src="melt.jpg" style="width: 300px"></a>
-        <p>MELT</a>
-        <br>
+            <a class="groundswell_inst" href="inst.html">
+                <img src="lilsitejawn.JPG" style="width: 400px">
+            </a>
 
-        <p><img src="megafear.jpg">
-        <p>megafear
-        <br>
+            <a class="groundswell_album" href="album.html">
+                <img src="lilsitejawn2.JPG" style="width: 400px">
+            </a>
 
-        <p><img src="통영반.png" style="width: 600px">
-        <p>통영반
-        <br>
 
-        <p><video autoplay loop muted>
-            <source src="whoops.webm" type='video/webm'>
-        </video>
-        <p> whoops
-        <br>    
+            <p id="credits">
+                Isaac "Red-Daw9" Silber <br> Emily Silber <br> Sam "52" Horn <br> Sky <br>
+            </p>
 
-        <p><img src="crying_manga.jpg">
-        <p>!#$%!@#$!^%!#$!@$^!%
-        <br>
+        </div>
+    </div>
+</body>
+<script src="functions.js"></script>
 
-        <p><img src="final-1.jpg">
-        <p><img src="final-2.jpg">
-        <p><img src="final-3.jpg">
-        <p>Installation of <b>Self-Portrait</b> @ Charles Addams Gallery
-        <br>2017
-
-        <p><img src="etecsa-1.jpg">
-        <p><img src="etecsa-2.jpg">
-        <p><img src="etecsa-3.jpg">
-        <p>From <b>WIFI_ETECSA</b> Series
-        <br>2017
-
-        <p><img src="bed-install.jpg">
-        <p>Installation of <b>Bed (November 2016)</b>
-        <br>2016
-
-        <p><img src="feet.jpg">
-        <p>Untitled Study
-        <br>2016
-
-        <p><img src="ipad.jpg">
-        <p>iPad Studies
-        <br>2016
-
-        <p><img src="shower.jpg">
-        <p>Detail of <b>Shower</b>, video
-        <br>2016
-
-        <p><img src="mystill.jpg">
-        <p>From <b>mystill.life</b> Live-stream
-        <br>2016
-    </body>
-    <script>
-        $("#currentTime").text(moment().format('h:mm:ssa'));
-        $("#currentDate").text(moment().format('MMMM Do'));
-        setInterval(function() {
-            $("#currentTime").text(moment().format('h:mm:ssa'));
-        }, 1000);
-
-        $('.dots a').click(function(event){
-            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                event.preventDefault();
-            }
-        }); 
-
-        var clairdelune = document.getElementById("clairdeluneSound");
-
-        $('#clairdelunePic').click(function(event){
-            return clairdelune.paused ? clairdelune.play() : clairdelune.pause();
-        }); 
-    </script>
 </html>
